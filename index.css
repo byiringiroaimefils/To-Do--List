@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    background-color: rgba(0, 0, 0, 0.829);
+}
+
+.cont{
+    background-color: rgba(255, 255, 255, 0.705);
+    width: 30%;
+    padding: 20px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* overflow: scroll; */
+}
+.cont input{
+    width: 70%;
+    padding-left: 30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+}
+.cont button{
+    padding: 8px;
+  /* width: 20px; */
+  background-color: gold;
+  border: none;
+  color: white;
+}
+table{
+    text-align: left;
+    width: 90%;
+}
+th{
+    border-bottom: 2px solid #202020;
+}

@@ -1,18 +1,12 @@
 <?php
  include("connection.php");
 $id=$_GET['id'];
-
 $sqli = "SELECT * FROM todolist WHERE id='$id' ";
-
 $run= mysqli_query($conn,$sqli);
 $row = mysqli_fetch_assoc($run);
+?>
 
 
-
-
-
-
-?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,43 +19,27 @@ $row = mysqli_fetch_assoc($run);
 
 <body>
     <div class="cont">
-        <form action="index.php" method="post">
-            <input type="text" name="enteritems" value="<?php echo $row['Items']; ?>">
-            <!-- <input type="submit"> -->
-            <button>+</button>
+    <h4>To Do List</h4>
+        <form action="#" method="post">
+            <input type="text" name="Newitem" value="<?php echo $row['Items']; ?>">
+            <button  name="submit">Save</button>
         </form>
         <Table>
-            <tr>
-                <th>Id</th>
-                <th>Items</th>
-            </tr>
             <?php
+            if(isset($_POST['submit'])){
+                $newitem=$_POST['Newitem'];
+                $sqli="INSERT INTO todolist Values ('','$newitem')";
+                $run=mysqli_query($conn,$sqli);
 
-            include("connection.php");
-            $sqli = "SELECT * FROM todolist";
-            $runs = mysqli_query($conn, $sqli);
-            if ($runs == true) {
-                foreach ($runs as $items) {
-                    echo " 
-              <tr>
-              <td> $items[id]</td>
-              <td>$items[Items]</td>
-              <td>
-              <a href='edit.php?id={$items['id']}'>edit</a>
-              <a href='Delete.php?id={$items['id']}'>delete</a>
-               </td>
-              </tr>
-              ";
+                if($run==true){
+                    header("location:index.php");
                 }
             }
-
             ?>
-
-
-
         </Table>
-
     </div>
+
+
 </body>
 
 </html>

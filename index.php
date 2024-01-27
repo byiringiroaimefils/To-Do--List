@@ -14,7 +14,6 @@
         <h4>To Do List</h4>
         <form action="#" method="post">
             <input type="text" name="enteritems" >
-            <!-- <input type="submit"> -->
             <button>+</button>
         </form>
         <Table>
@@ -42,8 +41,8 @@
               ";
                 }
             }
-
             ?>
+
         </Table>
 
     </div>

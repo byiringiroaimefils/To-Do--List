@@ -1,6 +1,6 @@
 <?php 
 
-$conn =mysqli_connect("localhost","root","","todolist");
+$conn =mysqli_connect("localhost","root","","test");
 
 // if($conn == true){
 //     echo "Db is connected";

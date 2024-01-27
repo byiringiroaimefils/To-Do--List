@@ -33,6 +33,8 @@ body{
   background-color: gold;
   border: none;
   color: white;
+  border-radius: 20%;
+  
 }
 table{
     text-align: left;

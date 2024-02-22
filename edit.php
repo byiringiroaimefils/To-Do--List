@@ -28,7 +28,7 @@ $row = mysqli_fetch_assoc($run);
             <?php
             if(isset($_POST['submit'])){
                 $newitem=$_POST['Newitem'];
-                $sqli="INSERT INTO todolist Values ('','$newitem')";
+                $sqli="UPDATE todolist SET items='$newitem' WHERE id='$id'";
                 $run=mysqli_query($conn,$sqli);
 
                 if($run==true){

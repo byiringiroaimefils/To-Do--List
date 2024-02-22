@@ -10,11 +10,13 @@ if ($runs == true) {
   <td> $items[id]</td>
   <td>$items[Items]</td>
   <td>
-  <a href='edit.php?id={$items['id']}'>Edit</a>
+  <a href='Edit.php?id={$items['id']}'>Edit</a>
   <a href='Delete.php?id={$items['id']}'>Delete</a>
    </td>
   </tr>
   ";
     }
 }
+
+
 ?>

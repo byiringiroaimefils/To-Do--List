@@ -1,7 +1,7 @@
 <?php
 include("connection.php");
-$id=$_GET["id"];
 
+$id=$_GET["id"];
 $sql= "DELETE FROM todolist WHERE id=$id";
 
 $run = mysqli_query($conn,$sql);

@@ -1,9 +1,12 @@
 <?php
  include("connection.php");
+
 $id=$_GET['id'];
 $sqli = "SELECT * FROM todolist WHERE id='$id' ";
 $run= mysqli_query($conn,$sqli);
 $row = mysqli_fetch_assoc($run);
+
+
 ?>
 
 
@@ -26,6 +29,7 @@ $row = mysqli_fetch_assoc($run);
         </form>
         <Table>
             <?php
+// Her we are going to update date from speccific row according to id
             if(isset($_POST['submit'])){
                 $newitem=$_POST['Newitem'];
                 $sqli="UPDATE todolist SET items='$newitem' WHERE id='$id'";
@@ -34,7 +38,8 @@ $row = mysqli_fetch_assoc($run);
                 if($run==true){
                     header("location:index.php");
                 }
-            }
+        }
+
             ?>
         </Table>
     </div>

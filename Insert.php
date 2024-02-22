@@ -1,4 +1,5 @@
 <?php
+// Here were going to insert new data in DB;
 include("connection.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $items = $_POST["enteritems"];

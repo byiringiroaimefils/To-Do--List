@@ -1,8 +1,11 @@
 <?php
-
+// Here we are going to include connection from connection.php file 
 include("connection.php");
+// Here is to select all data from DB then display them in from of  table  
 $sqli = "SELECT * FROM todolist";
+// here we're going to connect this connection $conn and $sqli  
 $runs = mysqli_query($conn, $sqli);
+
 if ($runs == true) {
     foreach ($runs as $items) {
         echo " 
@@ -17,6 +20,5 @@ if ($runs == true) {
   ";
     }
 }
-
 
 ?>
